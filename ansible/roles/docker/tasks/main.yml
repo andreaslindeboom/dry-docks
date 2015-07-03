@@ -1,0 +1,9 @@
+---
+- name: grab Docker install script
+  get_url: url=https://get.docker.com/ dest=/home/vagrant/docker.sh
+
+- name: install Docker
+  shell: sh docker.sh
+
+- name: clean up Docker install script
+  file: path=/home/vagrant/docker.sh state=absent
