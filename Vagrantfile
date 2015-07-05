@@ -10,6 +10,8 @@ Vagrant.configure(2) do |config|
       v.name = box_name
     end
 
+    box.vm.hostname = box_name
+
     box.vm.box = "ubuntu/trusty64"
 
     box.vm.network "private_network", type: "dhcp"
