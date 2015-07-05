@@ -7,3 +7,6 @@
 
 - name: clean up Docker install script
   file: path=/home/vagrant/docker.sh state=absent
+
+- name: add vagrant user to docker group
+  user: name=vagrant groups=docker append=yes
