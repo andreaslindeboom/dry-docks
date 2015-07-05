@@ -1,11 +1,11 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
-box_name = "dry-dock"
+box_name = "dry-docks"
 
 Vagrant.configure(2) do |config|
 
-  config.vm.define "dry-dock" do |box|
+  config.vm.define box_name do |box|
     box.vm.provider "virtualbox" do |v|
       v.name = box_name
     end
