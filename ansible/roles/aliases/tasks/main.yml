@@ -1,0 +1,6 @@
+---
+- name: Install aliases
+  copy: src=../files/aliases dest=/home/vagrant/.aliases owner=vagrant group=vagrant
+
+- name: load aliases on bash session
+  lineinfile: dest=/home/vagrant/.bashrc line="source ~/.aliases"
